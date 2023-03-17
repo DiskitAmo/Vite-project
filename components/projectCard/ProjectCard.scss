@@ -4,9 +4,9 @@
   overflow: hidden;
   cursor: pointer;
   border: 1px solid rgb(225, 225, 225);
-  padding-right: 10px;
+  margin-right: 10px;
   @media screen and (max-width: 720px) {
-    padding-right: 0px;
+    margin-right: 0px;
   }
   img {
     width: 100%;
