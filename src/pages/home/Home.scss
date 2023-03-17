@@ -1,4 +1,24 @@
 .home {
+  .carousel {
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+  .carousel-tab {
+    display: none;
+    @media screen and (max-width: 1280px) {
+      display: block;
+    }
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
+  }
+  .carousel-mobile {
+    display: none;
+    @media screen and (max-width: 720px) {
+      display: block;
+    }
+  }
   .features {
     background-color: #f1fdf7;
     display: flex;
@@ -41,19 +61,28 @@
     }
 
     .container {
-      width: 1400px;
-      display: flex;
+      max-width: 1400px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 200px;
+      justify-content: space-between;
+      gap: 100px;
+      @media screen and (max-width: 1040px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
       .item {
         display: flex;
         flex-direction: column;
         gap: 15px;
         &:first-child {
           flex: 2;
+          padding: 15px;
         }
         &:last-child {
           flex: 3;
+          align-items: center;
         }
 
         img {
@@ -84,7 +113,7 @@
         }
 
         video {
-          width: 720px;
+          width: 100%;
         }
       }
     }
@@ -104,8 +133,8 @@
     padding: 100px 0px;
 
     .container {
-      width: 1400px;
-
+      max-width: 1400px;
+      width: 100%;
       h1 {
         color: #555;
       }
@@ -115,7 +144,10 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-
+        @media screen and (max-width: 520px) {
+          align-items: center;
+          flex-direction: column;
+        }
         .item {
           width: 250px;
           height: 150px;

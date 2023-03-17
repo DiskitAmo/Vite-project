@@ -81,6 +81,9 @@ function Navbar() {
             </>
           )}
         </div>
+        <div className="mobile-links">
+          <img src="./img/th (1).jpg" alt="hamburger" />
+        </div>
       </div>
       {(active || pathname !== "/") && (
         <>

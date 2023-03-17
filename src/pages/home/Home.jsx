@@ -13,12 +13,27 @@ const Home = () => {
     <div className="home">
       <Featured />
       <TrustedBy />
-
-      <Slide slidesToShow={5} arrowsScroll={5}>
-        {cards.map((card) => (
-          <CatCard item={card} key={card.id} />
-        ))}
-      </Slide>
+      <div className="carousel">
+        <Slide slidesToShow={5} arrowsScroll={5}>
+          {cards.map((card) => (
+            <CatCard item={card} key={card.id} />
+          ))}
+        </Slide>
+      </div>
+      <div className="carousel-tab">
+        <Slide slidesToShow={3} arrowsScroll={3}>
+          {cards.map((card) => (
+            <CatCard item={card} key={card.id} />
+          ))}
+        </Slide>
+      </div>
+      <div className="carousel-mobile">
+        <Slide slidesToShow={1} arrowsScroll={1} centerMode={true}>
+          {cards.map((card) => (
+            <CatCard item={card} key={card.id} />
+          ))}
+        </Slide>
+      </div>
       <div className="features">
         <div className="container">
           <div className="item">
@@ -183,11 +198,27 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Slide slidesToShow={4} arrowsScroll={4}>
-        {projects.map((card) => (
-          <ProjectCard key={card.id} card={card} />
-        ))}
-      </Slide>
+      <div className="carousel">
+        <Slide slidesToShow={4} arrowsScroll={4}>
+          {projects.map((card) => (
+            <ProjectCard key={card.id} card={card} />
+          ))}
+        </Slide>
+      </div>
+      <div className="carousel-tab">
+        <Slide slidesToShow={3} arrowsScroll={3}>
+          {projects.map((card) => (
+            <ProjectCard key={card.id} card={card} />
+          ))}
+        </Slide>
+      </div>
+      <div className="carousel-mobile">
+        <Slide slidesToShow={1} arrowsScroll={1} centerMode={true}>
+          {projects.map((card) => (
+            <ProjectCard key={card.id} card={card} />
+          ))}
+        </Slide>
+      </div>
       <Gigs />
     </div>
   );
